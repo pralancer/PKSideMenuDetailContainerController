@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>backgroundImage</key>
+	<string></string>
+	<key>backgroundColor</key>
+	<string>white</string>
+	<key>defaults</key>
+	<dict>
+		<key>textColor</key>
+		<string>black</string>
+		<key>backgroundColor</key>
+		<string>white</string>
+		<key>selectedColor</key>
+		<string>lightgray</string>
+		<key>fontName</key>
+		<string>AvenirNextCondensed-Regular</string>
+		<key>fontSize</key>
+		<integer>15</integer>
+		<key>rowHeight</key>
+		<integer>48</integer>
+	</dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>rowHeight</key>
+			<integer>100</integer>
+			<key>imageName</key>
+			<string>MenuImage</string>
+			<key>selectable</key>
+			<false/>
+			<key>type</key>
+			<string>image</string>
+			<key>identifier</key>
+			<string>Item 7</string>
+		</dict>
+		<dict>
+			<key>textColor</key>
+			<string>lightgray</string>
+			<key>selectable</key>
+			<false/>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string></string>
+			<key>title</key>
+			<string>Websites</string>
+			<key>identifier</key>
+			<string>Websites</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>CNN</string>
+			<key>title</key>
+			<string>CNN</string>
+			<key>identifier</key>
+			<string>CNN</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>facebook</string>
+			<key>title</key>
+			<string>Facebook</string>
+			<key>identifier</key>
+			<string>Facebook</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>FT</string>
+			<key>title</key>
+			<string>FT</string>
+			<key>identifier</key>
+			<string>FT</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>NYTimes</string>
+			<key>title</key>
+			<string>NY Times</string>
+			<key>identifier</key>
+			<string>NY Times</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>Twitter</string>
+			<key>title</key>
+			<string>Twitter</string>
+			<key>identifier</key>
+			<string>Twitter</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>text</string>
+			<key>imageName</key>
+			<string>USAToday</string>
+			<key>title</key>
+			<string>USA Today</string>
+			<key>identifier</key>
+			<string>USA Today</string>
+		</dict>
+	</array>
+</dict>
+</plist>
