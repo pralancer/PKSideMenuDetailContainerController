@@ -50,4 +50,6 @@ To use this class follow these steps.
     controller segue to detailVCSegue.
  4. Set the layout constraints of the left and right container views so that the left container view has a specific width and is constrained to top, left and bottom layouts. Set the layout constraints of the detail to constrain to all the four sides since its the detail view controller and has to cover the whole screen.
 
+If you don't set a delegate to the menu table view controller then the selected menu item action is broadcasted via a notification `PKMainMenuTableViewDidSelectNotification` with the menu table view controller as the object. You can then use the selectedItem property of the table view controller to get the menu item that was selected.
+
 I am trying to simplify the usage further but if you have any questions please let me know.
