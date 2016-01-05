@@ -1,9 +1,10 @@
 # Demo
-![enter image description here](https://github.com/pralancer/PKSideMenuDetailContainerController/raw/master/Demo/Demo.gif)
+![This is what you get when you integrate the two controllers in your project. You can use this as the starting point for your project that requires this kind of container.](https://github.com/pralancer/PKSideMenuDetailContainerController/raw/master/Demo/Demo.gif)
+
 # Introduction
 There was a dire need of a container controller that displayed a menu on the left hand side and a detail controller on the right hand side.  Its similar to the Master detail controller but that didn't serve the purpose of having a retractable main menu which is usually implemented as a table view controller and a detail view controller which displays the details of the selected menu item. 
 
-This project serves to fill that gap. It consists of two modules
+This project serves to fill that gap. It consists of two modules. A plist based main menu controllers that you can use as the left side of the side menu and a side menu container view controller in which you can host this menu controller and your app specific detail controller.
 
 ### Menu Table view Controller and model ###
 A main menu table view controller that is driven by a plist based model for the menu items. You specify the menu items in a plist and a custom table view controller uses that plist as the model for the menu. Each menu item is highly configurable as a text or an image or a custom view. Each menu item attributes can be set indidivually or can be specified as defaults in the plist file. The menu itself can have a background color an background image.
