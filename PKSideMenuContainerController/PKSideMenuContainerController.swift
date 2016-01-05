@@ -149,7 +149,7 @@ class PKSideMenuContainerController: UIViewController {
         
         //whenever the orientation change the menu gets hidden because of the system's way of managing
         //the orientation. So I set the internal state to hidden so that the toggle works properly after the orientation is changed
-        menuHidden = true
+        setInitialState()
         
         //Set the shading view that is used to darken the menu to the size of the container view that holds the menu view
         self.shadingView.frame.size = self.menuContainer.frame.size
