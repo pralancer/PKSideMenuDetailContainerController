@@ -300,10 +300,11 @@ class PKSideMenuContainerController: UIViewController {
                     self.foldAnimation()
                 case .Reveal:
                     self.revealAnimation()
-                }}) {
+                }
+                self.menuHidden = !self.menuHidden
+                }) {
                     //completion block
                     [unowned self] _ in
-                   self.menuHidden = !self.menuHidden
                     self.view.userInteractionEnabled = true
                     self.view.sendSubviewToBack(self.menuContainer)
                 }
