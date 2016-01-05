@@ -1,3 +1,5 @@
+# Demo
+![enter image description here](https://github.com/pralancer/PKSideMenuDetailContainerController/raw/master/Demo/Demo.gif)
 # Introduction
 There was a dire need of a container controller that displayed a menu on the left hand side and a detail controller on the right hand side.  Its similar to the Master detail controller but that didn't serve the purpose of having a retractable main menu which is usually implemented as a table view controller and a detail view controller which displays the details of the selected menu item. 
 
