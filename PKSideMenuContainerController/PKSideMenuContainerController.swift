@@ -305,6 +305,7 @@ class PKSideMenuContainerController: UIViewController {
                     [unowned self] _ in
                    self.menuHidden = !self.menuHidden
                     self.view.userInteractionEnabled = true
+                    self.view.sendSubviewToBack(self.menuContainer)
                 }
         }
     }

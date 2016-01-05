@@ -8,6 +8,8 @@
 	<string>brown</string>
 	<key>defaults</key>
 	<dict>
+		<key>backgroundColor</key>
+		<string>white</string>
 		<key>textColor</key>
 		<string>black</string>
 		<key>selectedColor</key>
@@ -111,8 +113,16 @@
 	<key>items</key>
 	<array>
 		<dict>
-			<key>New item</key>
-			<string></string>
+			<key>rowHeight</key>
+			<integer>120</integer>
+			<key>imageName</key>
+			<string>FlowersHeader</string>
+			<key>type</key>
+			<string>image</string>
+			<key>selectable</key>
+			<false/>
+		</dict>
+		<dict>
 			<key>selectable</key>
 			<false/>
 			<key>title</key>

@@ -152,31 +152,24 @@ class PKMenuTableViewCell : UITableViewCell
         //remove any views added to the contentView of the cell since reusing does not remove the content view when scrolling fast
         let _ = self.contentView.subviews.map {$0.removeFromSuperview()}
         
-        self.textLabel?.text = item.title
-        if item.textColor != nil
-        {
-            self.textLabel?.textColor = item.textColor
-        }
-        if item.font != nil
-        {
-            self.textLabel?.font = item.font
-        }
+        self.textLabel?.text = item.title //set the title irrespective of the type
+        self.textLabel?.textColor = item.textColor
+        self.textLabel?.font = item.font
 
-        if item.type == PKMainMenuItem.ItemType.Image
+        self.imageView?.image = nil
+        if item.type == PKMainMenuItem.ItemType.Text
         {
-            if let imgView = self.contentView.viewWithTag(PKMainMenuTableViewController.kImageMenuItemTag)
-            {
-                imgView.removeFromSuperview()
-            }
-            
+            self.imageView?.image = item.image
+        }
+        else if item.type == PKMainMenuItem.ItemType.Image
+        {
             let imageView = UIImageView(frame: self.bounds)
             imageView.image = item.image
             imageView.tag = PKMainMenuTableViewController.kImageMenuItemTag
             imageView.frame.size.height = item.rowHeight
             self.contentView.addSubview(imageView)
         }
-
-        if item.type == PKMainMenuItem.ItemType.View
+        else if item.type == PKMainMenuItem.ItemType.View
         {
             if menuViewProvider != nil
             {
@@ -190,21 +183,25 @@ class PKMenuTableViewCell : UITableViewCell
             }
         }
 
-        //if the item type is a text menu item then set the image of the table view cell
-        if item.type == PKMainMenuItem.ItemType.Text
-        {
-            self.imageView?.image = item.image
-        }
-        
+        //set the backgroundColor if available
         if item.backgroundColor != nil
         {
             self.backgroundColor = item.backgroundColor
         }
+        else //otherwise make it no color. Have to set it to avoid reused cells traits being left over because of cell reuse
+        {
+            self.backgroundColor = UIColor.clearColor()
+        }
         
+        //if selectedColor is set then create a view and set that color as the background.
         if item.selectedColor != nil
         {
             self.selectedBackgroundView = UIView(frame: self.bounds)
             self.selectedBackgroundView?.backgroundColor = item.selectedColor
+        }
+        else //otherwise remove it
+        {
+            self.selectedBackgroundView = nil
         }
     }
 }

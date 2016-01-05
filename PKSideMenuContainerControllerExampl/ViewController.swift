@@ -44,9 +44,14 @@ class ViewController: UIViewController, PKMainMenuTableViewDelegate {
 
     //MARK: User Actions
     
+    func sideMenuContainerViewController() -> PKSideMenuContainerController!
+    {
+        return self.navigationController?.parentViewController as? PKSideMenuContainerController
+    }
+    
     @IBAction func setAnimationType(sender:AnyObject?)
     {
-        if let sideMenuVC = self.parentViewController?.parentViewController as? PKSideMenuContainerController
+        if let sideMenuVC = sideMenuContainerViewController()
         {
             switch sender?.tag
             {
@@ -71,7 +76,7 @@ class ViewController: UIViewController, PKMainMenuTableViewDelegate {
     /** Hide or show the shadown on the menu */
     @IBAction func toggleShadow(sender:AnyObject?)
     {
-        if let sideMenuVC = self.parentViewController?.parentViewController as? PKSideMenuContainerController
+        if let sideMenuVC = sideMenuContainerViewController()
         {
             sideMenuVC.hasShadowOnMenu = !sideMenuVC.hasShadowOnMenu
         }
@@ -79,7 +84,7 @@ class ViewController: UIViewController, PKMainMenuTableViewDelegate {
     
     @IBAction func userTappedMenu(sender:AnyObject?)
     {
-        if let sideMenuVC = self.parentViewController?.parentViewController as? PKSideMenuContainerController
+        if let sideMenuVC = sideMenuContainerViewController()
         {
             sideMenuVC.animationDuration = Double(durationSlider.value)
             sideMenuVC.toggle(sender)
@@ -99,6 +104,7 @@ extension ViewController
 /** Delegate callback when a menu item is selected. The selected menu item model is passed to the delegate function */
     func didSelectMenuItem(item:PKMainMenuItem)
     {
+        (sideMenuContainerViewController().detailViewController as! UINavigationController).setViewControllers([UIViewController()], animated: false)
         userTappedMenu(nil)
     }
 }
